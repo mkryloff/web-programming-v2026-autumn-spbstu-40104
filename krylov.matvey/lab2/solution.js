@@ -1,7 +1,7 @@
 export function findLongestPalindrome(str) {
   let maxLenPalindrome = '';
   for (let i = 0; i < str.length; i++) {
-    for (let j = i + 1; j < str.length; j++) {
+    for (let j = i + 1; j <= str.length; j++) {
       const string = str.slice(i, j);
       if (string === string.split('').reverse().join('')) {
         if (maxLenPalindrome.length < string.length) {
